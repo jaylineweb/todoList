@@ -12,3 +12,8 @@ h1{text-align:center;font-weight:600;}
 .input-area .form-control{display:inline-block; width:calc(96% - -4px); vertical-align:middle;}
 .container{overflow:hidden; position:relative; z-index:1; width:100%; height:100vh; background-color:#ffffff;}
 /* .container::before{opacity:0.1; position:absolute; top:0; left:0; z-index:-1; width:100%; height:100%; background-image:url(https://i.ytimg.com/vi/MirxtwvlaQI/sddefault.jpg); background-repeat:no-repeat; background-size:cover; content:"";} */
+
+
+@media all and (max-width:1400px){
+  .input-area .form-control{width:96%;}
+}
