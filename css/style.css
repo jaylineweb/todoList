@@ -23,3 +23,7 @@ h1{text-align:center;font-weight:600;}
 @media screen and (max-width:991px){
   .input-area .form-control{width:92%;}
 }
+@media screen and (max-width:767px){
+  .input-area .form-control{width:91%;}
+}
+
