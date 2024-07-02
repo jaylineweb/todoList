@@ -24,8 +24,8 @@ let onClickAdd = () => {
     taskItem.classList.add('task');
     taskItem.innerHTML=`<div>${taskValue}</div>
                     <div>
-                        <button class="check-button">Check</button>
-                        <button class="delete-button">Delete</button>
+                        <button class="check-button btn btn-primary">Check</button>
+                        <button class="delete-button btn btn-secondary">Delete</button>
                     </div>`;
 
     taskBoard.appendChild(taskItem);
