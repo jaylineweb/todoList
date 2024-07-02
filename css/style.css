@@ -17,3 +17,9 @@ h1{text-align:center;font-weight:600;}
 @media all and (max-width:1400px){
   .input-area .form-control{width:96%;}
 }
+@media all and (max-width:1200px){
+  .input-area .form-control{width:95%;}
+}
+@media screen and (max-width:991px){
+  .input-area .form-control{width:92%;}
+}
