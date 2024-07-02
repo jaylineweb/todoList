@@ -7,3 +7,5 @@ body{margin:0;background-image:url(../images/photo-1579546929518-9e396f3cc809.jf
 .task-tabs div{padding:1em;}
 #under-line{position:absolute;top:52px;left:0;width:80px;height:4px;padding:0;background-color:pink;}
 .task{display:flex;justify-content:space-between;padding:1em;}
+
+.input-area .form-control{display:inline-block;width:calc(97% - -4px);}
