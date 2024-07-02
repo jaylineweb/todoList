@@ -9,3 +9,7 @@ body{margin:0;background-image:url(../images/photo-1579546929518-9e396f3cc809.jf
 .task{display:flex;justify-content:space-between;padding:1em;}
 
 .input-area .form-control{display:inline-block;width: calc(96% - -4px);vertical-align: middle;}
+
+
+.container {overflow:hidden;position:relative;width:100%;height:100vh;}
+.container::before {content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-image:url(https://i.ytimg.com/vi/MirxtwvlaQI/sddefault.jpg);background-repeat:no-repeat;background-size:cover;opacity:0.5;z-index:1;}
