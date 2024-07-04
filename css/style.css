@@ -4,13 +4,17 @@
 
 /* body{display:flex;align-items:center;justify-content:center;margin:0;background-image:url(../images/photo-1579546929518-9e396f3cc809.jfif);background-repeat:no-repeat;background-size:cover;} */
 body{display:flex;align-items:center;justify-content:center;margin:0;background-image:url(https://images.pexels.com/photos/5717479/pexels-photo-5717479.jpeg?cs=srgb&dl=pexels-polina-kovaleva-5717479.jpg&fm=jpg);background-repeat:no-repeat;background-size:cover;}
+.skip{position:absolute;width:1px;height:1px;line-height:0;overflow:hidden;}
 .container{height:100%; background-color:#ffffff; box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
 .container.box{max-width: 820px;height:auto;min-height:95vh;border-top: 20px solid #362712;border-bottom: 20px solid #362712;}
 .container h1{padding:0.9em 0;font-family:"Wittgenstein", serif;font-weight:bold;text-align:center;}
 .task-area{margin-top:1em;border:1px solid #d3d3d3;border-bottom: 0;}
+
+/*탭 구분*/
 .task-tabs{display:flex;position:relative;border-bottom: 3px dotted lightgrey;background-color:#ffffff;}
-.task-tabs div{padding:1em 23px 1em 22px;}
-#under-line{position:absolute;top: 54px;left:0;width:80px;height:4px;padding:0;background-color:#535456;transition:all 0.3s ease-in;}
+.task-tabs div{padding:1em 23px 1em 22px;cursor:pointer;}
+
+#under-line{position:absolute;top: 54px;left:0;width:80px;height:4px;padding:0;background-color:#535456; transition:all 0.3s ease-in;}
 .task{display:flex;position: relative;align-items:center;padding:1em;background-color:#ffffff;justify-content:space-between;}
 .task.false{background-color:#eaeaea;}
 .task + .task{border-top:1px solid #cfc9c9;}
