@@ -9,7 +9,10 @@
 let taskInput = document.getElementById('task-input'); // 유저가 값을 입력하는 input 창
 let addButton = document.getElementById('add-button'); // + 버튼 추출
 let taskBoard = document.getElementById('task-board');
+let tabs = document.querySelectorAll('.tab');
+let underLine = document.getElementById('under-line');
 let taskList = []; // 할 일 목록을 저장하는 배열
+let currentTab = 'all';
 
 // 랜덤 ID 생성 함수
 function randomIDGenerate() {
@@ -19,7 +22,17 @@ function randomIDGenerate() {
 // 할 일 목록을 화면에 출력하는 함수
 let renderTaskList = () => {
     taskBoard.innerHTML = ""; // 기존 내용 초기화
-    taskList.forEach(task => {
+    let filteredList = [];
+
+    if (currentTab === 'all') {
+        filteredList = taskList;
+    } else if (currentTab === 'ongoing') {
+        filteredList = taskList.filter(task => !task.isComplete);
+    } else if (currentTab === 'done') {
+        filteredList = taskList.filter(task => task.isComplete);
+    }
+
+    filteredList.forEach(task => {
         let taskItem = document.createElement('div');
         taskItem.classList.add('task');
         if (task.isComplete) {
@@ -48,7 +61,7 @@ let onClickAdd = () => {
     let task = { // 객체 생성해주기
         id: randomIDGenerate(),
         taskContent: taskValue,
-        isComplete: true
+        isComplete: false
     }
 
     taskList.push(task); // 할 일 목록에 추가
@@ -76,3 +89,24 @@ function deleteTask(id) {
     taskList = taskList.filter(task => task.id !== id);
     renderTaskList();
 }
+
+// 탭 클릭 시 언더라인 이동 및 필터링
+tabs.forEach(tab => {
+    tab.addEventListener('click', function(event) {
+        tabs.forEach(tab => tab.classList.remove('active'));
+        event.target.classList.add('active');
+        currentTab = event.target.id;
+        moveUnderLine(event.target);
+        renderTaskList();
+    });
+});
+
+// 언더라인 이동 함수
+function moveUnderLine(target) {
+    underLine.style.left = target.offsetLeft + 'px';
+    underLine.style.width = target.offsetWidth + 'px';
+}
+
+// 초기 렌더링
+renderTaskList();
+moveUnderLine(document.getElementById('all'));
