@@ -10,7 +10,7 @@ body{display:flex;align-items:center;justify-content:center;margin:0;background-
 .task-area{margin-top:1em;border:1px solid #d3d3d3;border-bottom: 0;}
 .task-tabs{display:flex;position:relative;border-bottom: 3px dotted lightgrey;background-color:#ffffff;}
 .task-tabs div{padding:1em 23px 1em 22px;}
-#under-line{position:absolute;top: 54px;left:0;width:80px;height:4px;padding:0;background-color:#535456;}
+#under-line{position:absolute;top: 54px;left:0;width:80px;height:4px;padding:0;background-color:#535456;transition:all 0.3s ease-in;}
 .task{display:flex;position: relative;align-items:center;padding:1em;background-color:#ffffff;justify-content:space-between;}
 .task.false{background-color:#eaeaea;}
 .task + .task{border-top:1px solid #cfc9c9;}
