@@ -34,7 +34,7 @@ let renderTaskList = () => {
         }
         taskItem.innerHTML = `<div class="line_el">${task.taskContent}</div>
                             <div>
-                                <button class="check-button btn btn-primary ${task.isComplete ? 'true' : 'false'}" onclick="toggleComplete('${task.id}')">${task.isComplete ? '<span class="true"><i class="fa-solid fa-check"></i></span>' : '<span class="false"><i class="fa-solid fa-rotate-left"></i></span>'}</button>
+                                <button class="check-button btn btn-primary ${task.isComplete ? 'true' : 'false'}" onclick="toggleComplete('${task.id}')">${task.isComplete ?  '<span class="false"><i class="fa-solid fa-rotate-left"></i></span>' : '<span class="true"><i class="fa-solid fa-check"></i></span>' }</button>
                                 <button class="delete-button btn btn-secondary" onclick="deleteTask('${task.id}');"><i class="fa-solid fa-trash"></i></button>
                             </div>`;
         taskBoard.appendChild(taskItem);
