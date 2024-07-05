@@ -65,6 +65,13 @@ let onClickAdd = () => {
 
 addButton.addEventListener('click', onClickAdd); // + 버튼 클릭시 onClickAdd 함수 실행
 
+// Enter 키를 눌렀을 때 onClickAdd 함수 실행
+taskInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        onClickAdd();
+    }
+});
+
 // 완료 상태 토글 함수 추가
 function toggleComplete(id) {
     taskList = taskList.map(task => {
